@@ -1,0 +1,84 @@
+/* Apply box-sizing to all elements */
+* {
+    box-sizing: border-box;
+}
+
+/* Responsive layout - Makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .column.sideleft, .column.middle, .column.sideright {
+        width: 100%;
+    }
+}
+
+/* Create three unequal columns that float next to each other */
+.column {
+    float: left;
+    padding: 10px;
+    height: 300px; /* This can be removed when you add text. Only for demonstration */
+}
+
+/* Left column */
+.column.sideleft {
+    width: 25%;
+    background-color: violet;
+    overflow: auto;
+}
+
+.header {
+    background-color: orange;
+    text-align: center;
+    font-size: 30px;
+}
+
+.intro-text {
+    background-color: orange;
+    text-align: center;
+    font-size: 24px;
+}
+
+/* Styles for Favorite Foods section */
+.favorite-foods {
+    color: darkblue;
+    font-weight: bold;
+    font-size: 16px;
+    border: 2px dashed black;
+    padding: 5px;
+}
+
+/* Middle column */ 
+.column.middle {
+    width: 50%;
+    background-color: aqua;
+}
+
+/* Styles for Facts About You section */
+.facts-about-you {
+    color: darkgreen;
+    font-style: italic;
+    font-size: 16px;
+    border-left: 3px solid black;
+    padding-left: 10px;
+}
+
+/* Right column */
+.column.sideright {
+    width: 25%;
+    background-color: brown;
+}
+
+/* Styles for After JCCC section */
+.after-jccc {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+    border-top: 3px solid yellow;
+    padding-top: 10px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
